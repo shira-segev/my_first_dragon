@@ -1,0 +1,16 @@
+Time: Mon Mar  9 17:59:07 2026
+        Action: buddy play the free points game
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 10
+            points- 385
+            general rate- 60.0
+Time: Mon Mar  9 18:38:52 2026
+        Action: buddy sleep 4 hours
+        Metrics:
+            happiness- 100
+            hungry- 50
+            energy- 60
+            points- 390
+            general rate- 70.0

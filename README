@@ -1,0 +1,41 @@
+Project name- Webqinz
+
+Description- Webqinz is a web application for a virtual pet's world.
+              The application allows users to create and manage their own pet's virtual world.
+              Users can perform actions such as feeding the pet, let them play,
+              put them to sleep, and earning free points with a guessing numbers.
+
+Main features- Create a new pet
+               Connect to an existing pet
+               Feed the pet with different food options
+               Play lots of games with the pet
+               Let the pet sleep to restore energy
+               Guess numbers to earn free points
+               View pet current status (hunger, energy, happiness, points and general rate)
+               View the pet metrics monitoring
+
+Project Structure- my_first_dragon/     the base directory of the project
+                    *const/             the const that being in use all over the project
+                    *log_files/         the log files of each pet
+                    *models/            the model of the pet object
+                    *monitoring_data/   the samples files of each pet for the monitoring
+                    *pets_db/           the db that store the pets objects
+                    *services/          the logic and data handling
+                    *web/               Flask routes and web interface
+                        *static/            CSS
+                        *templates/         HTML pages
+
+Technologiyaaaa- Python
+                 Flask
+                 HTML
+                 CSS
+                 JSON
+
+How to run the project- 1. clone the repo
+                        2. go to the project folder 
+                        3. run the app by "python -m web.app"
+                        4. go to the browser and search "http://{your ip or the lo address 127.0.0.1}:8080/"
+                        5. create/connect to your own pet
+                        6. start play 
+
+

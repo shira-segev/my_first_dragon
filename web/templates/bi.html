@@ -1,0 +1,49 @@
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="container">
+
+<h1>Monitoring</h1>
+<div class="bi-grid">
+    <div class="bi-card">
+        <h3>by metric type:</h3>
+        <br>
+        <div class="bi-subcard">
+            <h4>First place action:</h4>
+        </div>
+        <div class="bi-subcard">
+            <h4>Amounts:</h4>
+            {% for action in counters %}
+            <p> {{ action[0] }}- {{ action[1]}} </p>
+        {% endfor %}
+        </div>
+        <div class="bi-subcard">
+            <h4>Below standard:</h4>
+        </div>
+        <div class="bi-subcard">
+            <h4>Graphs:</h4>
+        </div>
+        
+    </div>
+    <div class="bi-card">
+        <h3>by feature:</h3>
+        <br>
+        <div class="bi-subcard">
+            <h4>Happiness:</h4>
+        </div>
+        <div class="bi-subcard">
+            <h4>Hunger:</h4>
+        </div>
+        <div class="bi-subcard">
+            <h4>Energy standard:</h4>
+        </div>
+        <div class="bi-subcard">
+            <h4>General rate:</h4>
+        </div>
+
+    </div>
+    
+<br>
+<a href="{{ url_for('mypet_page', name=name) }}">Back</a>
+

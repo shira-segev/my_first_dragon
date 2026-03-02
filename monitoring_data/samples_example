@@ -1,0 +1,12 @@
+{
+    "happiness": {}, 
+    "hunger": {},
+    "energy": {},
+    "points": {},
+    "general_rate": {},
+    "eat": {},
+    "sleep": {},
+    "play": {}, 
+    "getpoints": {}
+
+}

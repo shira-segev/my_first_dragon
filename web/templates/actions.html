@@ -1,0 +1,41 @@
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="container">
+
+<h1>Choose an Action</h1>
+<div class="actions-grid">
+    <div class="action-card">
+        <img src="https://www.brainpop.co.il/content/category_8/subcategory_816/subjects_794/screenshot2.png"  
+             alt="eat" width="200" style="border: 2px solid #ddd; border-radius: 8px;">
+        <h3>Eat</h3>
+        <p>Feed your pet to increase energy and reduce hunger</p>
+        <a href="{{ url_for('one_action_page', name=name, action='eat') }}">Click here</a>
+    </div>
+    <div class="action-card">
+        <img src="https://ourboox-media-prod.s3.eu-west-1.amazonaws.com/wp-content/uploads/2019/03/28202750/28-collection-of-kid-going-to-bed-clipart-high-quality-free-throughout-going-to-bed-clipart-600x600.jpeg"  
+             alt="sleep" width="200" style="border: 2px solid #ddd; border-radius: 8px;">
+        <h3>Sleep</h3>
+        <p>Let your pet rest to recover energy</p>
+        <a href="{{ url_for('one_action_page', name=name, action='sleep') }}">Click here</a>
+    </div>
+    <div class="action-card">
+        <img src="https://www.prog.co.il/media/%D7%A9%D7%91%D7%99%D7%9C-%D7%9E%D7%A6%D7%95%D7%99%D7%A8-%D7%A4%D7%90%D7%A8%D7%A7-%D7%A9%D7%A2%D7%A9%D7%95%D7%A2%D7%99%D7%9D.71217/full?d=1557864358"  
+             alt="play" width="200" style="border: 2px solid #ddd; border-radius: 8px;">
+        <h3>Play</h3>
+        <p>Play games to increase happiness</p>
+        <a href="{{ url_for('one_action_page', name=name, action='play') }}">Click here</a>
+    </div>
+    <div class="action-card">
+        <img src="https://image.shutterstock.com/image-vector/colorful-wheel-fortune-lucky-promotions-260nw-2651874335.jpg"  
+             alt="get points" width="200" style="border: 2px solid #ddd; border-radius: 8px;">
+        <h3>Get points</h3>
+        <p>Try to guess the number and earn points</p>
+        <a href="{{ url_for('one_action_page', name=name, action='getpoints') }}">Click here</a>
+    </div>
+</div>
+
+<br>
+<a href="{{ url_for('mypet_page', name=name) }}">Back</a>
+

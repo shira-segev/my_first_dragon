@@ -1,0 +1,22 @@
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="container">
+
+<h1>{{ name }}'s Status</h1>
+
+<h3>Features:</h3>
+<p>Hunger: <progress value="{{ pet.hunger }}" max="100"></progress></p>
+<p>Energy: <progress value="{{ pet.energy }}" max="100"></progress></p>
+<p>Happiness: <progress value="{{ pet.happiness }}" max="100"></progress></p>
+
+<br> <br>
+<h3>Score:</h3>
+<p>Points: {{ pet.points }}</p>
+<p>General Rate: {{ pet.general_rate }}</p>
+
+<br>
+<a href="{{ url_for('mypet_page', name=name) }}">Back</a>
+
+

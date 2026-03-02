@@ -1,0 +1,64 @@
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="container">
+
+<h1>Food Menu</h1>
+
+
+<form method="POST">
+    food:
+    <select name="food">
+        {% for food in food_menu %}
+            <option value="{{ food[0] }}"> {{ food[0] }} </option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Enter</button>
+</form>
+
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+
+
+<h2>Vegan</h2>
+<br>
+<img src="https://img.lovepik.com/free-png/20210922/lovepik-hand-painted-cartoon-bananas-png-image_401046808_wh1200.png"  
+             alt="banana" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://img.lovepik.com/free-png/20210923/lovepik-red-apple-png-image_401223081_wh1200.png"  
+             alt="apple" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://img.lovepik.com/free-png/20210922/lovepik-cartoon-carrot-png-image_401160897_wh1200.png"  
+             alt="carrot" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU2Gdh-XWfzyfto7vUb9AIFAECw5JCIZbs0g&s"  
+             alt="watermelon" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<br>
+
+<h2>Pastry</h2>
+<br>
+<img src="https://img.lovepik.com/original_origin_pic/19/01/17/32ba191b1a4e72acde123a0158e6c5aa.png_wh860.png"  
+             alt="bread" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://img.lovepik.com/free-png/20211208/lovepik-delicious-croissant-png-image_401422953_wh1200.png"  
+             alt="Croissant" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://img.lovepik.com/png/20231011/Cute-cartoon-stacked-chocolate-biscuit-cookie-clipart-cookies-clip-art_171385_wh860.png"  
+             alt="cookei" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb8fFEJ-_vBVr03XNBKynrEGDqir-LsQvqGQ&s"  
+             alt="cake" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<br>
+<h2>Protain</h2>
+<br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfC4bC5NIQWwzyzk87mBZlvWEtXseJuY-f7Q&s"  
+             alt="cheese" width="74" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://img.lovepik.com/free-png/20211206/lovepik-omelette-png-image_401368649_wh1200.png"  
+             alt="omelet" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://img.lovepik.com/original_origin_pic/18/09/06/68369b7989f23364e92cb5c18f6e22ee.png_wh860.png"  
+             alt="chicken" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://img.lovepik.com/png/20231021/Clip-art-western-food-cartoon-steak-beef-western-restaurant_294810_wh860.png"  
+             alt="meat" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<br>
+
+<pre>{{ my_pet.show_food_menu() }}</pre>
+
+<br>
+<a href="{{ url_for('actions_page', name=name) }}">Back</a>
