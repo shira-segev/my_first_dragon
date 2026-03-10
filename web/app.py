@@ -79,7 +79,14 @@ def bi_page(name):
     my_pet = pets.get(name)
     if not my_pet:
         return render_template("error.html")
-    return render_template("bi.html", pet=my_pet, name=name, counters=monitoring_calculation.calc_actions_counters_monitoring(my_pet))
+    monitoring_calculation.create_progress_graphes(my_pet)
+    return render_template("bi.html", pet=my_pet, name=name, 
+                           today_reps=monitoring_calculation.calc_actions_today_reps(my_pet), 
+                           reps_history=monitoring_calculation.calc_actions_history(my_pet), 
+                           below_standart=monitoring_calculation.calc_below_standart_features(my_pet),
+                           feature_avg=monitoring_calculation.calc_features_avg_rate(my_pet),
+                           best_action=monitoring_calculation.cacl_first_place_action(my_pet))
+
 
 
 # pet- get actions

@@ -3,9 +3,10 @@ import time
 import json
 from enum import Enum
 import models.pet as pet
+from const import constants
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-MONITORING_DATA_DIR = os.path.join(BASE_DIR, "monitoring_data")
+
+MONITORING_DATA_DIR = os.path.join(constants.BASE_DIR, "monitoring_data")
 
 
 # convert the data to a dict from the json db

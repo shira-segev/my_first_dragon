@@ -7,39 +7,185 @@
 <h1>Monitoring</h1>
 <div class="bi-grid">
     <div class="bi-card">
-        <h3>by metric type:</h3>
+        <h3>By monitoring type:</h3>
         <br>
         <div class="bi-subcard">
-            <h4>First place action:</h4>
+            <h4>Most repeated action:</h4>
+            <p1>The most repeated actions {{ name }} did since {{ name }} creation</p1>
+            {% for action in best_action %}
+                <p> {{ action[0] }}- {{ action[1]}} times </p>
+            {% endfor %}
         </div>
         <div class="bi-subcard">
-            <h4>Amounts:</h4>
-            {% for action in counters %}
-            <p> {{ action[0] }}- {{ action[1]}} </p>
-        {% endfor %}
+            <h4>Actions's reps of today:</h4>
+            <p1>How many times {{ name }} did each action today</p1>
+            {% for action in today_reps %}
+                <p> {{ action[0] }}- {{ action[1]}} </p>
+            {% endfor %}
         </div>
         <div class="bi-subcard">
-            <h4>Below standard:</h4>
+            <h4>Actions's reps of all times:</h4>
+            <p1>How many times {{ name }} did each action since {{ name }} creation</p1>
+            {% for action in reps_history %}
+                <p> {{ action[0] }}- {{ action[1]}} times</p>
+            {% endfor %}
+        </div>
+        <div class="bi-subcard">
+            <h4>Features below standard:</h4>
+            <p1>How many times each feature of {{ name }}was below 20 points</p1>
+            {% for feature in below_standart %}
+                <p> {{ feature[0] }}- {{ feature[1]}} times</p>
+            {% endfor %}
+        </div>
+        <div class="bi-subcard">
+            <h4>Average rate of features:</h4>
+            <p1>The Average rate of each feature of {{ name }} in the last hour</p1>
+            {% for feature in feature_avg %}
+                <p> {{ feature[0] }}- {{ feature[1]}} points</p>
+            {% endfor %}
         </div>
         <div class="bi-subcard">
             <h4>Graphs:</h4>
+            <p1>Graphs that shows the progretion of each feature of {{ name }} </progress></p1>
+            <p>Happiness- </p>
+            <img src="{{ url_for('static', filename='happiness_progress_graph.png') }}"  
+             alt="Happiness_progress_graph" width="500" style="border: 2px solid #ddd; border-radius: 8px;"> 
+            <p>Hunger-  </p>
+            <img src="{{ url_for('static', filename='hunger_progress_graph.png') }}"  
+             alt="Hunger_progress_graph" width="500" style="border: 2px solid #ddd; border-radius: 8px;">
+            <p>Energy-  </p>
+            <img src="{{ url_for('static', filename='energy_progress_graph.png') }}"  
+             alt="Energy_progress_graph" width="500" style="border: 2px solid #ddd; border-radius: 8px;">
+            <p>General rate-  </p>
+            <img src="{{ url_for('static', filename='general_rate_progress_graph.png') }}"  
+             alt="General rate_progress_graph" width="500" style="border: 2px solid #ddd; border-radius: 8px;">
         </div>
         
     </div>
     <div class="bi-card">
-        <h3>by feature:</h3>
+        <h3>By feature:</h3>
         <br>
         <div class="bi-subcard">
             <h4>Happiness:</h4>
+            {% for feature in feature_avg %}
+                {% if feature[0] == "happiness" %}
+                    <p> Average of the last hour- {{ feature[1]}} points</p>
+                {% endif %}
+            {% endfor %}
+            {% for feature in below_standart %}
+                {% if feature[0] == "happiness" %}
+                    <p> Below standart- {{ feature[1]}} points</p>
+                {% endif %}
+            {% endfor %}
+            <p>Progress Graph- </p>
+            <img src="{{ url_for('static', filename='happiness_progress_graph.png') }}"  
+             alt="Happiness_progress_graph" width="500" style="border: 2px solid #ddd; border-radius: 8px;"> 
         </div>
         <div class="bi-subcard">
             <h4>Hunger:</h4>
+            {% for feature in feature_avg %}
+                {% if feature[0] == "hunger" %}
+                    <p> Average of the last hour- {{ feature[1]}} points</p>
+                {% endif %}
+            {% endfor %}
+            {% for feature in below_standart %}
+                {% if feature[0] == "hunger" %}
+                    <p> Below standart- {{ feature[1]}} points</p>
+                {% endif %}
+            {% endfor %}
+            <p>Progress Graph- </p>
+            <img src="{{ url_for('static', filename='hunger_progress_graph.png') }}"  
+             alt="Hunger_progress_graph" width="500" style="border: 2px solid #ddd; border-radius: 8px;">
         </div>
         <div class="bi-subcard">
             <h4>Energy standard:</h4>
+            {% for feature in feature_avg %}
+                {% if feature[0] == "energy" %}
+                    <p> Average of the last hour- {{ feature[1]}} points</p>
+                {% endif %}
+            {% endfor %}
+            {% for feature in below_standart %}
+                {% if feature[0] == "energy" %}
+                    <p> Below standart- {{ feature[1]}} points</p>
+                {% endif %}
+            {% endfor %}
+            <p>Progress Graph- </p>
+            <img src="{{ url_for('static', filename='energy_progress_graph.png') }}"  
+             alt="Energy_progress_graph" width="500" style="border: 2px solid #ddd; border-radius: 8px;">
         </div>
         <div class="bi-subcard">
             <h4>General rate:</h4>
+            {% for feature in feature_avg %}
+                {% if feature[0] == "general rate" %}
+                    <p> Average of the last hour- {{ feature[1]}} points</p>
+                {% endif %}
+            {% endfor %}
+            {% for feature in below_standart %}
+                {% if feature[0] == "general rate" %}
+                    <p> Below standart- {{ feature[1]}} points</p>
+                {% endif %}
+            {% endfor %}
+            <p>Progress Graph- </p>
+            <img src="{{ url_for('static', filename='general_rate_progress_graph.png') }}"  
+             alt="General rate_progress_graph" width="500" style="border: 2px solid #ddd; border-radius: 8px;">
+        </div>
+
+    </div>
+
+    <div class="bi-card">
+        <h3>By action:</h3>
+        <br>
+        <div class="bi-subcard">
+            <h4>Eat:</h4>
+            {% for action in today_reps %}
+                {% if action[0] == "eat" %}
+                    <p> Actions's reps of today- {{ action[1]}} times</p>
+                {% endif %}
+            {% endfor %}
+            {% for action in reps_history %}
+                {% if action[0] == "eat" %}
+                    <p>Actions's reps of all times- {{ action[1]}} times</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="bi-subcard">
+            <h4>Sleep:</h4>
+            {% for action in today_reps %}
+                {% if action[0] == "sleep" %}
+                    <p> Actions's reps of today- {{ action[1]}} times</p>
+                {% endif %}
+            {% endfor %}
+            {% for action in reps_history %}
+                {% if action[0] == "sleep" %}
+                    <p>Actions's reps of all times- {{ action[1]}} times</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="bi-subcard">
+            <h4>Play:</h4>
+            {% for action in today_reps %}
+                {% if action[0] == "play" %}
+                    <p> Actions's reps of today- {{ action[1]}} times</p>
+                {% endif %}
+            {% endfor %}
+            {% for action in reps_history %}
+                {% if action[0] == "play" %}
+                    <p>Actions's reps of all times- {{ action[1]}} times</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="bi-subcard">
+            <h4>Get point:</h4>
+            {% for action in today_reps %}
+                {% if action[0] == "get points" %}
+                    <p> Actions's reps of today- {{ action[1]}} times</p>
+                {% endif %}
+            {% endfor %}
+            {% for action in reps_history %}
+                {% if action[0] == "get points" %}
+                    <p>Actions's reps of all times- {{ action[1]}} times</p>
+                {% endif %}
+            {% endfor %}
         </div>
 
     </div>

@@ -14,3 +14,131 @@ Time: Mon Mar  9 18:38:52 2026
             energy- 60
             points- 390
             general rate- 70.0
+Time: Tue Mar 10 10:58:01 2026
+        Action: buddy sleep 2 hours
+        Metrics:
+            happiness- 100
+            hungry- 60
+            energy- 80
+            points- 395
+            general rate- 73.33
+Time: Tue Mar 10 10:58:22 2026
+        Action: buddy ate Banana
+        Metrics:
+            happiness- 100
+            hungry- 50
+            energy- 90
+            points- 405
+            general rate- 80.0
+Time: Tue Mar 10 10:58:23 2026
+        Action: buddy ate Banana
+        Metrics:
+            happiness- 100
+            hungry- 40
+            energy- 100
+            points- 415
+            general rate- 86.67
+Time: Tue Mar 10 10:58:23 2026
+        Action: buddy ate Banana
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 100
+            points- 425
+            general rate- 90.0
+Time: Tue Mar 10 12:39:45 2026
+        Action: buddy is playing Jumping Rope
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 90
+            points- 445
+            general rate- 86.67
+Time: Tue Mar 10 12:39:48 2026
+        Action: buddy is playing Football
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 80
+            points- 465
+            general rate- 83.33
+Time: Tue Mar 10 12:39:50 2026
+        Action: buddy is playing Tennis
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 70
+            points- 485
+            general rate- 80.0
+Time: Tue Mar 10 12:39:53 2026
+        Action: buddy is playing Trampoline
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 60
+            points- 505
+            general rate- 76.67
+Time: Tue Mar 10 12:39:56 2026
+        Action: buddy is playing Football
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 50
+            points- 525
+            general rate- 73.33
+Time: Tue Mar 10 12:39:59 2026
+        Action: buddy is playing Tennis
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 40
+            points- 545
+            general rate- 70.0
+Time: Tue Mar 10 12:40:02 2026
+        Action: buddy is playing Football
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 30
+            points- 565
+            general rate- 66.67
+Time: Tue Mar 10 12:40:04 2026
+        Action: buddy is playing Jumping Rope
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 20
+            points- 585
+            general rate- 63.33
+Time: Tue Mar 10 12:40:06 2026
+        Action: buddy is playing Football
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 10
+            points- 605
+            general rate- 60.0
+Time: Tue Mar 10 12:40:09 2026
+        Action: buddy is playing Tennis
+        Metrics:
+            happiness- 100
+            hungry- 30
+            energy- 0
+            points- 625
+            general rate- 56.67
+Time: Tue Mar 10 12:49:32 2026
+        Action: buddy sleep 10 hours
+        Metrics:
+            happiness- 100
+            hungry- 100
+            energy- 100
+            points- 630
+            general rate- 66.67
+Time: Tue Mar 10 16:40:16 2026
+        Action: buddy play the free points game
+        Metrics:
+            happiness- 100
+            hungry- 100
+            energy- 90
+            points- 630
+            general rate- 63.33

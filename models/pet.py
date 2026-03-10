@@ -13,7 +13,7 @@ MIN_VALUE = 0
 
 # Sleep effect constants
 SLEEP_ENERGY_POINTS = 10
-SLEEP_HUNGER_POINTS = 5
+SLEEP_HUNGER_POINTS = 10
 SLEEP_HOURS_RANGE = [f"{i + 1}" for i in range(10)]
 SLEEP_EXPLANATION = """For every hour of sleep you will receive 10 energy points and 5 hunger points will increase.\n
 Your maximum energy is 100, no matter how many hours you sleep."""
