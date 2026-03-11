@@ -170,7 +170,49 @@ def create_progress_graphes(my_pet: pet.Pet):
         x_value = []
         y_value = []
         plt.figure()
+
+
+def create_action_reps_graph(my_pet: pet.Pet):
+    actions_reps = calc_actions_history(my_pet)
+    actions_today_reps = calc_actions_today_reps(my_pet)
+    left = [1, 2, 3, 4, 5]
+    tick_label = []
+    height = []
+    for action in actions_reps:
+        tick_label.append(action[0])
+        height.append(action[1])
     
+    plt.bar(left, height, tick_label = tick_label, width = 0.8, color = ["blue"])
+
+    plt.xlabel("actions")
+    plt.ylabel("reps")
+    plt.title("action reps")
+
+    file_path = os.path.join(STATIC_DIR, f"action_reps.png")
+    plt.savefig(file_path)
+    plt.close()
+
+    tick_label = []
+    height = []
+    plt.figure()
+
+    for action in actions_today_reps:
+        tick_label.append(action[0])
+        height.append(action[1])
+    
+    plt.bar(left, height, tick_label = tick_label, width = 0.8, color = ["blue"])
+
+    plt.xlabel("actions")
+    plt.ylabel("reps")
+    plt.title("action reps")
+
+    file_path = os.path.join(STATIC_DIR, f"action_today_reps.png")
+    plt.savefig(file_path)
+    plt.close()
+
+
+    
+
 
 
 

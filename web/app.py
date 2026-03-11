@@ -80,6 +80,7 @@ def bi_page(name):
     if not my_pet:
         return render_template("error.html")
     monitoring_calculation.create_progress_graphes(my_pet)
+    monitoring_calculation.create_action_reps_graph(my_pet)
     return render_template("bi.html", pet=my_pet, name=name, 
                            today_reps=monitoring_calculation.calc_actions_today_reps(my_pet), 
                            reps_history=monitoring_calculation.calc_actions_history(my_pet), 

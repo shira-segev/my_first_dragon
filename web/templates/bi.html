@@ -22,6 +22,8 @@
             {% for action in today_reps %}
                 <p> {{ action[0] }}- {{ action[1]}} </p>
             {% endfor %}
+            <img src="{{ url_for('static', filename='action_today_reps.png') }}"  
+             alt="action_today_reps" width="500" style="border: 2px solid #ddd; border-radius: 8px;">
         </div>
         <div class="bi-subcard">
             <h4>Actions's reps of all times:</h4>
@@ -29,6 +31,8 @@
             {% for action in reps_history %}
                 <p> {{ action[0] }}- {{ action[1]}} times</p>
             {% endfor %}
+            <img src="{{ url_for('static', filename='action_reps.png') }}"  
+             alt="action_reps" style="border: 2px solid #ddd; border-radius: 8px;">
         </div>
         <div class="bi-subcard">
             <h4>Features below standard:</h4>

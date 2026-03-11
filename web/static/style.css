@@ -128,8 +128,8 @@ pre{
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 .bi-card img {
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 10px;
 }
 .bi-card a:hover {
@@ -182,6 +182,15 @@ pre{
 }
 
 
+.bi-subcard img{
+    display:block;
+    margin:15px auto;
+    max-width:100%;
+    width:420px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
 
 
 
