@@ -1,0 +1,17 @@
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="container">
+
+
+<h1>{{ name }}'s Page</h1>
+
+<p>To view your pet's status- <a href="/home/{{name}}/status/">Click here</a></p>
+<br><br>
+<p>To view your pet's optional actions- <a href="/home/{{name}}/actions/">Click here</a></p>
+<br><br>
+<p>To view your pet's BI page- <a href="/home/{{name}}/bi/">Click here</a></p>
+
+<br>
+<a href="{{ url_for('home_page') }}">Back</a>

@@ -1,0 +1,26 @@
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="container">
+
+<h1>Guess The Number (1-10)</h1>
+
+<p>If you will guess the random amount of points, you will receive them!!!</p>
+
+<form method="POST">
+    <input type="number" name="guess" min="1">
+    <button type="submit">Enter</button>
+</form>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfPHjI7y3Jw9-LxurH_rxoBkxAe8VQKksmMg&s"  
+             alt="etz o pali" width="200" style="border: 2px solid #ddd; border-radius: 8px;">
+
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+
+<br>
+<a href="{{ url_for('actions_page', name=name) }}">Back</a>
+
+

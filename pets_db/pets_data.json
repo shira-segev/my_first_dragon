@@ -1,0 +1,11 @@
+{
+    "buddy": {
+        "name": "buddy",
+        "type": "dragon",
+        "hunger": 100,
+        "energy": 100,
+        "happiness": 100,
+        "general_rate": 66.67,
+        "points": 635
+    }
+}

@@ -1,0 +1,40 @@
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="container">
+
+<h1>Play</h1>
+
+<form method="POST">
+    Game:
+    <select name="game">
+        {% for game in games_menu %}
+            <option value="{{ game[0] }}"> {{ game[0] }} </option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Enter</button>
+</form>
+
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+
+<br>
+<img src="https://image.shutterstock.com/image-vector/jump-rope-icon-vector-illustration-260nw-2714209595.jpg"  
+             alt="jumping roops" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://www.yo-yoo.co.il/coloring/thumbs/images/d8666e.jpg"  
+             alt="football" width="80" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPhJnTy9Ch65hPB9i9Zdf90KtNxFp08guXjg&s"  
+             alt="tennis" width="110" style="border: 2px solid #ddd; border-radius: 8px;">
+<img src="https://trampolinot.co.il/wp-content/uploads/2020/05/%D7%98%D7%A8%D7%9E%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%94-%D7%9C%D7%95%D7%92%D7%95.png"  
+             alt="trampoline" width="110" style="border: 2px solid #ddd; border-radius: 8px;">
+<br>
+
+<pre> {{ my_pet.show_games_menu() }}</pre>
+
+<br>
+<a href="{{ url_for('actions_page', name=name) }}">Back</a>
+
+
